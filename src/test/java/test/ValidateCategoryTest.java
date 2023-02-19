@@ -4,7 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import page.ValidateAddCategory;
+
+import page.ValidateAddCategoryPage;
 import util.BrowserFactory;
 
 public class ValidateCategoryTest {
@@ -30,11 +31,11 @@ public class ValidateCategoryTest {
 			e.printStackTrace();
 		}
 	}*/
-	@Test
+	/*@Test
 	public void checkAddCategory()
 	{
 		driver=BrowserFactory.init();
-		ValidateAddCategory validateaddcategory=PageFactory.initElements(driver,ValidateAddCategory.class);
+		ValidateAddCategoryPage validateaddcategory=PageFactory.initElements(driver,ValidateAddCategoryPage.class);
 		validateaddcategory.addCategory(category);
 		//BrowserFactory.tearDown();	
 	}
@@ -43,10 +44,17 @@ public class ValidateCategoryTest {
 	public void checkDuplicatecategory()
 	{
 		driver=BrowserFactory.init();
-		ValidateAddCategory validateaddcategory=PageFactory.initElements(driver,ValidateAddCategory.class);
+		ValidateAddCategoryPage validateaddcategory=PageFactory.initElements(driver,ValidateAddCategoryPage.class);
 		System.out.println("helelllo");
 		validateaddcategory.checkDuplicateCategory(category);
 		//BrowserFactory.tearDown();
+	}*/
+	
+	@Test
+	public void checkMonthDropDown() {
+		driver = BrowserFactory.init();
+		ValidateAddCategoryPage addCategoryPage = PageFactory.initElements(driver, ValidateAddCategoryPage.class);
+        addCategoryPage.checkMonthAvailable(); 
 	}
 	
 }

@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4979" started-at="2023-02-14T22:49:15 CST" finished-at="2023-02-14T22:49:20 CST">
+  <suite name="Default suite" duration-ms="3140" started-at="2023-02-18T19:30:02 CST" finished-at="2023-02-18T19:30:05 CST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4979" started-at="2023-02-14T22:49:15 CST" finished-at="2023-02-14T22:49:20 CST">
+    <test name="Default test" duration-ms="3140" started-at="2023-02-18T19:30:02 CST" finished-at="2023-02-18T19:30:05 CST">
       <class name="test.ValidateCategoryTest">
-        <test-method status="PASS" signature="checkAddCategory()[pri:0, instance:test.ValidateCategoryTest@6acdbdf5]" name="checkAddCategory" duration-ms="2913" started-at="2023-02-14T22:49:15 CST" finished-at="2023-02-14T22:49:18 CST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkAddCategory -->
-        <test-method status="FAIL" signature="checkDuplicatecategory()[pri:0, instance:test.ValidateCategoryTest@6acdbdf5]" name="checkDuplicatecategory" duration-ms="2028" started-at="2023-02-14T22:49:18 CST" finished-at="2023-02-14T22:49:20 CST">
+        <test-method status="FAIL" signature="checkMonthDropDown()[pri:0, instance:test.ValidateCategoryTest@2a556333]" name="checkMonthDropDown" duration-ms="3109" started-at="2023-02-18T19:30:02 CST" finished-at="2023-02-18T19:30:05 CST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The category you want to add already exists expected [testCategory8] but found [testCategory9]]]>
+              <![CDATA[Month check expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The category you want to add already exists expected [testCategory8] but found [testCategory9]
+              <![CDATA[java.lang.AssertionError: Month check expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at page.ValidateAddCategory.checkDuplicateCategory(ValidateAddCategory.java:39)
-at test.ValidateCategoryTest.checkDuplicatecategory(ValidateCategoryTest.java:30)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at page.ValidateAddCategoryPage.checkMonthAvailable(ValidateAddCategoryPage.java:78)
+at test.ValidateCategoryTest.checkMonthDropDown(ValidateCategoryTest.java:57)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,7 +52,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkDuplicatecategory -->
+        </test-method> <!-- checkMonthDropDown -->
       </class> <!-- test.ValidateCategoryTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
